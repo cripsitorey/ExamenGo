@@ -13,20 +13,19 @@ func main() {
 	fmt.Scan(&opt)
 	switch opt {
 	case 1:
-		fmt.Println("El subtotal es: ")
 		RegistrarVenta()
 		main()
 	case 2:
 		main()
 	case 3:
-		main()
+		break
 	default:
 		fmt.Println("Ingresa unicamente un numero valido")
 		main()
 	}
 }
 
-func RegistrarVenta() float64 {
+func RegistrarVenta() {
 	productosNombre = make([]string, 3)
 	elected := 0
 	precio := 0.0
@@ -51,5 +50,7 @@ func RegistrarVenta() float64 {
 	fmt.Println("Ingresa la cantidad")
 	cantidad := 0
 	fmt.Scan(&cantidad)
-	return float64(cantidad) * precio
+
+	subtotal := float64(cantidad) * precio
+	fmt.Println("El subtotal es: ", subtotal, "Dolares")
 }
