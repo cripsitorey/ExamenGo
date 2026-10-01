@@ -27,6 +27,7 @@ func main() {
 }
 
 func RegistrarVenta() float64 {
+	productosNombre = make([]string, 3)
 	elected := 0
 	precio := 0.0
 	fmt.Println("Selecciona 1 para arroz, 2 para leche y 3 para pan")
